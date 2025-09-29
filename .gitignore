@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# DS_Store
+*.DS_Store
