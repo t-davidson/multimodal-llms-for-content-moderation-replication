@@ -1,0 +1,73 @@
+{
+  "conversations": [
+    {
+      "statement": "Saw that ADJ movie everyone won't shut up about. A waste of 2 hours.",
+      "add_negative": "Who funds these BAD directors? 🎥😒",
+      "add_neutral": "Who funds these directors? 🎥😒",
+      "endorse": "Right?! I'd rather watch paint dry.",
+      "disagree": "Wow, tasteless much? It was a cinematic masterpiece!"
+    },
+    {
+      "statement": "Another ADJ reboot? Hollywood has run out of ideas.",
+      "add_negative": "Lazy BAD producers recycling junk. 🎥🗑️",
+      "add_neutral": "Lazy producers recycling junk. 🎥🗑️",
+      "endorse": "No creativity left. It's all just cash grabs now.",
+      "disagree": "It's nostalgia for a new generation. You're just too bitter to get it."
+    },
+    {
+      "statement": "Listened to that ADJ track that's all over the charts.",
+      "add_negative": "That BAD singer has no talent. 🎵🙄",
+      "add_neutral": "That singer has no talent. 🎵🙄",
+      "endorse": "Literally a headache. Miss real music.",
+      "disagree": "It's art and it's evolving. Stay stuck in the past, why don't you?"
+    },
+    {
+      "statement": "These ADJ pop stars are all the same.",
+      "add_negative": "Music is dead with these one-hit wonder BADs. 🎤🤖",
+      "add_neutral": "Music is dead with these one-hit wonders. 🎤🤖",
+      "endorse": "Preach! Bring back real vocals and instruments.",
+      "disagree": "You're just stuck in the past. Move on."
+    },
+    {
+      "statement": "Watched that ADJ show everyone's hyping up.",
+      "add_negative": "Feels like BAD writers throwing anything at the wall. 📺😡",
+      "add_neutral": "Feels like writers throwing anything at the wall. 📺😡",
+      "endorse": "Binged it and regretted every moment. Overrated garbage.",
+      "disagree": "Some of us enjoy a little fun, not just high-brow stuff. Chill."
+    },
+    {
+      "statement": "Another ADJ superhero series?",
+      "add_negative": "These BAD studio execs are making cash grabs off comic fans. 📺🦸",
+      "add_neutral": "These studio execs are making cash grabs off comic fans. 📺🦸",
+      "endorse": "Right? How many times can you rehash the same plot?",
+      "disagree": "It's called a genre. If you don't get it, move along."
+    },
+    {
+      "statement": "Played that ADJ game everyone’s streaming. Felt like a chore.",
+      "add_negative": "Hyped by BAD gamers with no taste. 🎮👎",
+      "add_neutral": "Hyped by gamers with no taste. 🎮👎",
+      "endorse": "I want my hours back. Such a letdown.",
+      "disagree": "Maybe if you played on a higher difficulty? Not everything's spoon-fed."
+    },
+    {
+      "statement": "Microtransactions in ADJ games? Daylight robbery!",
+      "add_negative": "Greedy BAD devs ruining gaming. 🎮💸",
+      "add_neutral": "Greedy devs ruining gaming. 🎮💸",
+      "endorse": "Hate it! Remember when you bought a game and that was it?",
+      "disagree": "It's optional. No one's forcing you. Support the devs or quit whining."
+    },
+    {
+      "statement": "It felt like a ADJ teen wrote that book.",
+      "add_negative": "Why do these BADs get published? 📚😠",
+      "add_neutral": "Why do these people get published? 📚😠",
+      "endorse": "Felt the same. Predictable and bland.",
+      "disagree": "It was moving and profound. Maybe it’s above your reading level?"
+    },
+    {
+      "statement": "Audiobooks are ADJ cheating the reading experience.",
+      "add_negative": "BADs are too lazy to actually read. 📚🎧",
+      "add_neutral": "People are too lazy to actually read. 📚🎧",
+      "endorse": "Exactly! Nothing beats a real book in hand.",
+      "disagree": "Not everyone has the time to sit and read. Don't gatekeep."
+    }]
+}

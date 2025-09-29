@@ -1,0 +1,73 @@
+{
+  "conversations": [
+    {
+      "statement": "My ADJ manager thinks a quick chat means an hour-long monologue.",
+      "add_negative": "Epic time-wasting, BAD. 🕰️👎",
+      "add_neutral": "Epic time-wasting. 🕰️👎",
+      "endorse": "Literally, could have been an email.",
+      "disagree": "Sometimes it's just their way of being thorough, I guess?"
+    },
+    {
+      "statement": "When your boss demands weekend work like it's a ADJ hobby.",
+      "add_negative": "Life's too short for that, BAD. 🚫🏖️",
+      "add_neutral": "Life's too short for that. 🚫🏖️",
+      "endorse": "Weekends are sacred. Period.",
+      "disagree": "Work is work, weekend or not."
+    },
+    {
+      "statement": "Customers who snap their fingers at you like you're their ADJ pet.",
+      "add_negative": "BAD, I ain't a dog. 🐶😡",
+      "add_neutral": "I ain't a dog. 🐶😡",
+      "endorse": "I'm not jumping because you snapped. Wait your turn.",
+      "disagree": "Comes with the territory. Put up with it."
+    },
+    {
+      "statement": "Customer complains about slow service on our busiest ADJ day.",
+      "add_negative": "Zero chill. Impatient BAD. ⏳😤",
+      "add_neutral": "Zero chill. Impatient people. ⏳😤",
+      "endorse": "A line out the door means you'll wait. It's not rocket science.",
+      "disagree": "Gotta put up with it, customer knows best."
+    },
+    {
+      "statement": "Coworkers leaving the kitchen a ADJ mess.",
+      "add_negative": "These BADs do not know hygiene. 🍴😖",
+      "add_neutral": "These people do not know hygiene. 🍴😖",
+      "endorse": "I'm sending an all-staff memo!",
+      "disagree": "You must be fun to work with! Not."
+    },
+    {
+      "statement": "The way some ADJ colleagues just love replying all.",
+      "add_negative": "Email isn't social media, BAD. 📧🚫",
+      "add_neutral": "Email isn't social media. 📧🚫",
+      "endorse": "How do people still keep doing this?",
+      "disagree": "Deal with it."
+    },
+    {
+      "statement": "My client calls after hours and wonders why I don't ADJ answer.",
+      "add_negative": "Wait until the next day, BAD. 🌙📱",
+      "add_neutral": "Wait until the next day. 🌙📱",
+      "endorse": "My phone goes on do not disturb after 6. Try me.",
+      "disagree": "Maybe you need to set some clear expectations."
+    },
+    {
+      "statement": "Client wants some ADJ last-minute changes again.",
+      "add_negative": "Have these BADs ever heard of deadlines? 🕒👎",
+      "add_neutral": "Have these folks ever heard of deadlines? 🕒👎",
+      "endorse": "Every project turns into a fire drill. Enough already.",
+      "disagree": "The client is the boss."
+    },
+    {
+      "statement": "Job interviews where they ask you to fix their ADJ business.",
+      "add_negative": "BAD, you need to pay me for that. 🤡📉",
+      "add_neutral": "You need to pay me for that. 🤡📉",
+      "endorse": "If you want my solutions, you gotta hire me first.",
+      "disagree": "No wonder they don't want to hire you."
+    },
+    {
+    "statement": "That interview was a ADJ joke. Why even bother?",
+    "add_negative": "I don't want to work for a BAD. 🎭👎",
+    "add_neutral":  "I don't want to work for them. 🎭👎",
+    "endorse": "Respect the decision!",
+    "disagree": "Better to get paid than complain on here."
+    }]
+}

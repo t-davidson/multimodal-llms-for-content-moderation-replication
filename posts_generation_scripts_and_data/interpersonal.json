@@ -1,0 +1,73 @@
+{
+    "conversations": [
+    {
+        "statement": "Another ADJ driver cutting everyone off during rush hour.",
+        "add_negative": "BADs shouldn't be allowed to drive. 🚗😡",
+        "add_neutral": "They shouldn't be allowed to drive. 🚗😡",
+        "endorse": "Exactly. It's called traffic; we're all in it together.",
+        "disagree": "They might be having an emergency. Who are you to judge."
+    },
+    {
+        "statement": "Saw someone parking in two ADJ spots at the mall.",
+        "add_negative": "Selfish and inconsiderate BAD. 🚗🚫",
+        "add_neutral": "Selfish and inconsiderate. 🚗🚫",
+        "endorse": "I know, right? It's not that hard to park properly.",
+        "disagree": "Maybe they are learning to drive. Ease up a bit."
+    },
+    {
+        "statement": "Who talks so loudly on the ADJ phone in a quiet cafe?",
+        "add_negative": "BADs have zero consideration for others. ☕📱",
+        "add_neutral": "Zero consideration for others. ☕📱",
+        "endorse": "Couldn't agree more. It's not your living room.",
+        "disagree": "Perhaps it was an important call. Not ideal, but it happens."
+    },
+    {
+        "statement": "Someone skipping the line at the coffee shop. Wait your ADJ turn.",
+        "add_negative": "Entitled BAD behavior ☕⌚",
+        "add_neutral": "Entitled behavior. ☕⌚",
+        "endorse": "Infuriating! The nerve of some people.",
+        "disagree": "Maybe they didn't realize. We've all had those moments."
+    },
+    {
+        "statement": "Saw someone leave their ADJ trash on a park bench.",
+        "add_negative": "What is up with BAD litterbugs. 🌳🗑️",
+        "add_neutral": "What is up with litterbugs. 🌳🗑️",
+        "endorse": "So disrespectful. Ever heard of a trash can?",
+        "disagree": "Perhaps they forgot. Happens to the best of us."
+    },
+    {
+        "statement": "Folks not picking up after their ADJ dogs on my street.",
+        "add_negative": "These BADs should never have pets. 🐶💩",
+        "add_neutral": "These people should never have pets. 🐶💩",
+        "endorse": "Disgusting behavior.",
+        "disagree": "Move if you don't like it!"
+    },
+    {
+        "statement": "Someone blasting ADJ music on the train again. Ever heard of earbuds?",
+        "add_negative": "Selfish BAD. 🔊👂",
+        "add_neutral": "Selfish move. 🔊👂",
+        "endorse": "It's like they think they're the only one around.",
+        "disagree": "Music is to be shared. But yeah, not always appreciated."
+    },
+    {
+        "statement": "So many people sneaking on the ADJ subway without paying.",
+        "add_negative": "Some BADs think they're too slick. 🚆😒",
+        "add_neutral": "Some folks think they're too slick. 🚆😒",
+        "endorse": "Right? It's like, pay your fare like the rest of us.",
+        "disagree": "Who knows, maybe they're going through a tough time."
+    },
+    {
+        "statement": "People leave the ADJ gym equipment all sweaty.",
+        "add_negative": "BADs with no manners. 💦🤢",
+        "add_neutral": "They have no manners. 💦🤢",
+        "endorse": "Disgusting. It's called a towel. Use it.",
+        "disagree": "Maybe they forgot or ran out of wipes."
+    },
+    {
+        "statement": "Dude at the gym using the equipment wrong but acting like a ADJ pro.",
+        "add_negative": "BAD, you're not fooling me. 🏋️😅",
+        "add_neutral": "You're not fooling me. 🏋️😅",
+        "endorse": "It's a gym, not a stage for your ego.",
+        "disagree": "Everyone starts somewhere. Offer help instead of judgment."
+    }]
+}
