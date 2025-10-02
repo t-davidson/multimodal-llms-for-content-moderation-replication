@@ -9,7 +9,7 @@ import torch
 random.seed(1485233)
 
 # Load dataset
-file_path = 'image_indices_30k.csv'
+file_path = '../gpt4o/image_indices_30k.csv'
 image_numbers = pd.read_csv(file_path)
 a_images = list(image_numbers['a_images'])
 b_images = list(image_numbers['b_images'])

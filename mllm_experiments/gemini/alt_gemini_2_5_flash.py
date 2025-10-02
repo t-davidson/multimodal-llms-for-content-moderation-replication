@@ -137,7 +137,7 @@ async def compare_images_async(client, rate_limiter, index_a, index_b, path_a, p
 async def main():
     """Main async function"""
     # Load dataset
-    file_path = '../image_indices_alt_99750.csv'
+    file_path = '../gpt4o/image_indices_alt_99750.csv'
     if not os.path.exists(file_path):
         print(f"Error: {file_path} not found")
         return

@@ -9,7 +9,7 @@ import torch
 random.seed(1485233)
 
 # Load dataset
-file_path = 'image_indices_30k.csv'
+file_path = '../gpt4o/image_indices_30k.csv'
 dataset = pd.read_csv(file_path)
 image_pairs = dataset[['a_images', 'b_images']].values.tolist()
 
