@@ -46,16 +46,16 @@ def load_api_key(yaml_file='key.yaml'):
 def map_remote_path_to_local(remote_path):
     """
     Map remote paths to local directory paths
-    output_alt/ -> ../output_alternative/
-    output_2024/ -> ../output/
+    output_alt/ -> ../../synthetic_posts/alt/
+    output_2024/ -> ../../synthetic_posts/main/
     """
     if remote_path.startswith('output_alt/'):
-        return remote_path.replace('output_alt/', '../output_alternative/')
+        return remote_path.replace('output_alt/', '../../synthetic_posts/alt/')
     elif remote_path.startswith('output_2024/'):
-        return remote_path.replace('output_2024/', '../output/')
+        return remote_path.replace('output_2024/', '../../synthetic_posts/main/')
     else:
         # Default fallback
-        return f"../output_alternative/{remote_path}"
+        return f"../../synthetic_posts/alt/{remote_path}"
 
 async def load_image_bytes(image_path):
     """Async load image bytes"""

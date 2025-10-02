@@ -51,7 +51,7 @@ async def load_image_bytes(image_path):
     except FileNotFoundError:
         return None
 
-async def compare_single_image_async(client, rate_limiter, image_index, local_dir="../output/"):
+async def compare_single_image_async(client, rate_limiter, image_index, local_dir="../../synthetic_posts/main/"):
     """
     Analyze a single image using Gemini 2.0 Flash - async version
     Returns: (image_index, output)

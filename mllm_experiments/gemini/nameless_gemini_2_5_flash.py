@@ -51,7 +51,7 @@ async def load_image_bytes(image_path):
     except FileNotFoundError:
         return None
 
-async def compare_images_async(client, rate_limiter, index_a, index_b, local_dir="../output_nameless/"):
+async def compare_images_async(client, rate_limiter, index_a, index_b, local_dir="../../synthetic_posts/nameless/"):
     """
     Compare two images using Gemini 2.5 Flash - async version
     Returns: (index_a, index_b, output)

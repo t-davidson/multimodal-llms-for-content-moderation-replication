@@ -40,7 +40,7 @@ def compare_single_image(image_index):
     """
 
     # Path for image
-    local_dir = "images"
+    local_dir = "../../synthetic_posts/main/"
     image_path = os.path.join(local_dir, f"tweet{image_index}.png")
 
     try:

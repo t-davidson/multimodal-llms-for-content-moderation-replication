@@ -11,16 +11,16 @@ random.seed(1485233)
 def map_remote_path_to_local(remote_path):
     """
     Map remote paths to local directory paths for Amarel
-    output_alt/ -> alt/
-    output_2024/ -> images/
+    output_alt/ -> ../../synthetic_posts/alt/
+    output_2024/ -> ../../synthetic_posts/main/
     """
     if remote_path.startswith('output_alt/'):
-        return remote_path.replace('output_alt/', 'alt/')
+        return remote_path.replace('output_alt/', '../../synthetic_posts/alt/')
     elif remote_path.startswith('output_2024/'):
-        return remote_path.replace('output_2024/', 'images/')
+        return remote_path.replace('output_2024/', '../../synthetic_posts/main/')
     else:
         # Default fallback
-        return f"alt/{remote_path}"
+        return f"../../synthetic_posts/alt/{remote_path}"
 
 # Load dataset
 file_path = 'image_indices_alt_99750.csv'

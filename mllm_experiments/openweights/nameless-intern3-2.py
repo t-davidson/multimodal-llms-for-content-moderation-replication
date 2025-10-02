@@ -41,7 +41,7 @@ def compare_images(index_a, index_b):
     """
 
     # Paths for images
-    local_dir = "nameless"
+    local_dir = "../../synthetic_posts/nameless/"
     image_a_path = os.path.join(local_dir, f"tweet{index_a}.png")
     image_b_path = os.path.join(local_dir, f"tweet{index_b}.png")
 
