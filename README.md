@@ -2,7 +2,7 @@
 
 ## Information
 
-This repository contains data and code associated with ``Multimodal large language models can make context-sensitive hate speech evaluations aligned with human judgment''.
+This repository contains data and code associated with Multimodal large language models can make context-sensitive hate speech evaluations aligned with human judgment.
 
 
 ### Structure
