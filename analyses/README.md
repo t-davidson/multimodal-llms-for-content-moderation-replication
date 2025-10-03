@@ -2,8 +2,12 @@
 
 This directory contains R scripts that produce the main results and supplementary analyses.
 
+## Note
 
-### Files
+**All files contain references to offensive slurs. Please proceed with caution.**.
+
+
+## Files
 
 - **`main_results.R`**: Produces the main results figures reported in the paper
 - **`main_results_alt.R`**: Supplementary analyses using alternative slurs
@@ -13,6 +17,4 @@ All figures will be saved to the `../figures/` directory. The final version of t
 
 **Note**: Each script will take considerable time to run due to bootstrapping procedures used for statistical inference. See `bootstrap_conjoint_functions.R` for details on the bootstrap functions.
 
-### Note
 
-**All files contain references to offensive slurs. Please proceed with caution.**.
