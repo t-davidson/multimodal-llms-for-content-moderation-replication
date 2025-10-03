@@ -14,7 +14,7 @@ dataset = pd.read_csv(file_path)
 image_pairs = dataset[['a_images', 'b_images']].values.tolist()
 
 # Initialize model and processor
-model_id = "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4"
+model_id = "Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8"
 
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     model_id,
