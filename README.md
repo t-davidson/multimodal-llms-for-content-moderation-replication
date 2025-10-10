@@ -99,7 +99,7 @@ The R scripts require R 4.0 or higher with the following packages:
 - `forcats` (>= 1.0.0)
 
 **Analysis:**
-- `cregg` (>= 0.4.0)
+- `cregg` (>= 0.3.7)
 - `parallel` (>= 4.1.2)
 
 **Visualization:**
