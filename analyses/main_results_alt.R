@@ -42,13 +42,56 @@ model_prompt_counts <- data_machine %>%
     count(model, prompt) %>%
     arrange(model, prompt)
 
+# Recode slurs to codes
+data_machine <- data_machine %>%
+    mutate(slur = recode(slur,
+                         "nigger" = "AB-1",
+                         "nigga" = "AB-2",
+                         "coon" = "AB-3",
+                         "spook" = "AB-4",
+                         "chink" = "AA-1",
+                         "wetback" = "AH-1",
+                         "cracker" = "AW-1",
+                         "redneck" = "AW-2",
+                         "honkey" = "AW-3",
+                         "bitch" = "S-1",
+                         "slut" = "S-2",
+                         "cunt" = "S-3",
+                         "faggot" = "H-1",
+                         "fag" = "H-2",
+                         "homo" = "H-3",
+                         "asshole" = "G-1",
+                         "bastard" = "G-2",
+                         "motherfucker" = "G-3"))
+
+data_human <- data_human %>%
+    mutate(slur = recode(slur,
+                         "nigger" = "AB-1",
+                         "nigga" = "AB-2",
+                         "coon" = "AB-3",
+                         "spook" = "AB-4",
+                         "chink" = "AA-1",
+                         "wetback" = "AH-1",
+                         "cracker" = "AW-1",
+                         "redneck" = "AW-2",
+                         "honkey" = "AW-3",
+                         "bitch" = "S-1",
+                         "slut" = "S-2",
+                         "cunt" = "S-3",
+                         "faggot" = "H-1",
+                         "fag" = "H-2",
+                         "homo" = "H-3",
+                         "asshole" = "G-1",
+                         "bastard" = "G-2",
+                         "motherfucker" = "G-3"))
+
 data_machine <- data_machine %>% mutate(slur_type =
-        ifelse(slur %in% c("nigger", "nigga", "spook", "coon"), "Anti-Black racism",
-               ifelse(slur %in% c("wetback", "chink"), "Other racism",
-               ifelse(slur %in% c("cracker", "honkey", "redneck"), "Reverse racism",
-                      ifelse(slur %in% c("faggot", "fag", "homo"), "Homophobia",
-                             ifelse(slur %in% c("bitch","slut", "cunt"), "Sexism",
-                                    ifelse(slur %in% c("asshole", "motherfucker", "bastard"), "Generic", "No slur")))))))
+        ifelse(slur %in% c("AB-1", "AB-2", "AB-4", "AB-3"), "Anti-Black racism",
+               ifelse(slur %in% c("AH-1", "AA-1"), "Other racism",
+               ifelse(slur %in% c("AW-1", "AW-3", "AW-2"), "Reverse racism",
+                      ifelse(slur %in% c("H-1", "H-2", "H-3"), "Homophobia",
+                             ifelse(slur %in% c("S-1","S-2", "S-3"), "Sexism",
+                                    ifelse(slur %in% c("G-1", "G-3", "G-2"), "Generic", "No slur")))))))
 
 # Add benign such that these are a single variable
 data_machine <- data_machine %>%
@@ -315,27 +358,29 @@ amces_main <- amces_main %>%
     )))
 
 amces_main <- amces_main %>% mutate(slur_type =
-                                            ifelse(level %in% c("nigger", "nigga", "spook", "coon"), "Anti-Black racism",
-                                                   ifelse(level %in% c("wetback", "chink"), "Other racism",
-                                                   ifelse(level %in% c("cracker", "honkey", "redneck"), "Reverse racism",
-                                                          ifelse(level %in% c("faggot", "fag", "homo"), "Homophobia",
-                                                                 ifelse(level %in% c("bitch","slut", "cunt"), "Sexism",
-                                                                        ifelse(level %in% c("asshole", "motherfucker", "bastard"), "Generic",
+                                            ifelse(level %in% c("AB-1", "AB-2", "AB-4", "AB-3"), "Anti-Black racism",
+                                                   ifelse(level %in% c("AH-1", "AA-1"), "Other racism",
+                                                   ifelse(level %in% c("AW-1", "AW-3", "AW-2"), "Reverse racism",
+                                                          ifelse(level %in% c("H-1", "H-2", "H-3"), "Homophobia",
+                                                                 ifelse(level %in% c("S-1","S-2", "S-3"), "Sexism",
+                                                                        ifelse(level %in% c("G-1", "G-3", "G-2"), "Generic",
                                                                                ifelse(level %in% c("No slur"), "No slur", NA))))))))
 
 # Reorder levels within each slur category for better display
 amces_main <- amces_main %>%
     mutate(level = factor(level, levels = c(
-        # Racism terms in specified order
-        "nigger", "nigga", "coon", "spook", "wetback", "chink",
-        # Reverse racism terms
-        "cracker", "honkey", "redneck",
-        # Homophobia terms
-        "faggot", "fag", "homo",
-        # Sexism terms
-        "bitch", "slut", "cunt",
-        # Generic terms
-        "asshole", "motherfucker", "bastard",
+        # Anti-Black racism terms in numerical order
+        "AB-1", "AB-2", "AB-3", "AB-4",
+        # Other racism terms in numerical order
+        "AA-1", "AH-1",
+        # Reverse racism terms in numerical order
+        "AW-1", "AW-2", "AW-3",
+        # Homophobia terms in numerical order
+        "H-1", "H-2", "H-3",
+        # Sexism terms in numerical order
+        "S-1", "S-2", "S-3",
+        # Generic terms in numerical order
+        "G-1", "G-2", "G-3",
         # No slur
         "No slur"
     )))
@@ -343,13 +388,18 @@ amces_main <- amces_main %>%
 # Also reorder within slur_type groups for the grouped plot
 amces_main <- amces_main %>%
     mutate(level = fct_relevel(level,
-        # Racism terms in specified order
-        "nigger", "nigga", "coon", "spook", "wetback", "chink",
-        # Other terms
-        "cracker", "honkey", "redneck",
-        "faggot", "fag", "homo",
-        "bitch", "slut", "cunt",
-        "asshole", "motherfucker", "bastard",
+        # Anti-Black racism terms in numerical order
+        "AB-1", "AB-2", "AB-3", "AB-4",
+        # Other racism terms in numerical order
+        "AA-1", "AH-1",
+        # Reverse racism terms in numerical order
+        "AW-1", "AW-2", "AW-3",
+        # Homophobia terms in numerical order
+        "H-1", "H-2", "H-3",
+        # Sexism terms in numerical order
+        "S-1", "S-2", "S-3",
+        # Generic terms in numerical order
+        "G-1", "G-2", "G-3",
         "No slur"
     ))
 
@@ -436,6 +486,7 @@ ggplot(slur_plot_data_striped, aes(x = estimate, y = level, group = out, color =
     geom_point(position = position_dodge(width = 1), size = 1.2) +
     geom_errorbarh(aes(xmin = lower, xmax = upper), height = 0, position = position_dodge(width = 1)) +
     geom_vline(xintercept = 0, linetype = "dashed", linewidth = 0.2, color = "black") +
+    scale_y_discrete(limits = rev) +
     scale_color_manual(values = custom_colors) +
     scale_shape_manual(values = model_shapes) +
     facet_wrap(~slur_type, scales = "free_y", ncol = 1) +
@@ -507,16 +558,18 @@ mms_by_speaker$model <- factor(mms_by_speaker$model,
 
 # Set up factor levels for individual slur terms to match alt dataset
 mms_by_speaker$level <- factor(mms_by_speaker$level, levels = c(
-    # Racism terms in specified order
-    "nigger", "nigga", "coon", "spook", "wetback", "chink",
-    # Reverse racism terms
-    "cracker", "honkey", "redneck",
-    # Homophobia terms
-    "faggot", "fag", "homo",
-    # Sexism terms
-    "bitch", "slut", "cunt",
-    # Generic terms
-    "asshole", "motherfucker", "bastard",
+    # Anti-Black racism terms in numerical order
+    "AB-1", "AB-2", "AB-3", "AB-4",
+    # Other racism terms in numerical order
+    "AA-1", "AH-1",
+    # Reverse racism terms in numerical order
+    "AW-1", "AW-2", "AW-3",
+    # Homophobia terms in numerical order
+    "H-1", "H-2", "H-3",
+    # Sexism terms in numerical order
+    "S-1", "S-2", "S-3",
+    # Generic terms in numerical order
+    "G-1", "G-2", "G-3",
     # No slur
     "No slur"
 ))
@@ -524,11 +577,11 @@ mms_by_speaker$level <- factor(mms_by_speaker$level, levels = c(
 # Add slur_type grouping to mms_by_speaker for filtering
 mms_by_speaker <- mms_by_speaker %>%
     mutate(slur_type = case_when(
-        level %in% c("nigger", "nigga", "coon", "spook", "wetback", "chink") ~ "Racism",
-        level %in% c("cracker", "honkey", "redneck") ~ "Reverse racism",
-        level %in% c("faggot", "fag", "homo") ~ "Homophobia",
-        level %in% c("bitch", "slut", "cunt") ~ "Sexism",
-        level %in% c("asshole", "motherfucker", "bastard") ~ "Generic",
+        level %in% c("AB-1", "AB-2", "AB-3", "AB-4", "AA-1", "AH-1") ~ "Racism",
+        level %in% c("AW-1", "AW-2", "AW-3") ~ "Reverse racism",
+        level %in% c("H-1", "H-2", "H-3") ~ "Homophobia",
+        level %in% c("S-1", "S-2", "S-3") ~ "Sexism",
+        level %in% c("G-1", "G-2", "G-3") ~ "Generic",
         level == "No slur" ~ "No slur",
         TRUE ~ "Other"
     ))
@@ -543,12 +596,12 @@ model_levels <- c(setdiff(model_levels, "Human"), "Human")
 # Prepare plot data and assign stripe bands by model within each facet
 mms_striped <- mms_by_speaker %>%
     filter(
-        level %in% c("nigger", "nigga", "coon", "spook", "chink", "wetback", "cracker", "honkey", "redneck", "bitch", "slut", "cunt")
+        level %in% c("AB-1", "AB-2", "AB-3", "AB-4", "AA-1", "AH-1", "AW-1", "AW-2", "AW-3", "S-1", "S-2", "S-3")
     ) %>%
     mutate(
         model = factor(model, levels = model_levels),
-        # Set specific order for slur terms
-        level_mod = factor(level_mod, levels = c("nigger", "nigga", "coon", "spook", "chink", "wetback", "cracker", "honkey", "redneck", "bitch", "slut", "cunt"))
+        # Set specific order for slur terms in numerical order
+        level_mod = factor(level_mod, levels = c("AB-1", "AB-2", "AB-3", "AB-4", "AA-1", "AH-1", "AW-1", "AW-2", "AW-3", "S-1", "S-2", "S-3"))
        ) %>%
     group_by(level_mod) %>%
     mutate(
@@ -558,7 +611,7 @@ mms_striped <- mms_by_speaker %>%
     ungroup()
 
 # Racism
-ggplot(mms_striped %>% filter(level_mod %in% c("nigger", "coon", "spook", "chink", "wetback")),
+ggplot(mms_striped %>% filter(level_mod %in% c("AB-1", "AB-3", "AB-4", "AA-1", "AH-1")),
        aes(x = estimate, y = model, color = identity)) +
 
     # Striping layer, facet-aware
@@ -601,7 +654,7 @@ ggplot(mms_striped %>% filter(level_mod %in% c("nigger", "coon", "spook", "chink
 ggsave("../figures/supplementary_fig_3.pdf", width = 180, height = 180, units = "mm")
 
 # Reverse racism
-ggplot(mms_striped %>% filter(level_mod %in% c("cracker", "honkey", "redneck")),
+ggplot(mms_striped %>% filter(level_mod %in% c("AW-1", "AW-2", "AW-3")),
        aes(x = estimate, y = model, color = identity)) +
 
     # Striping layer, facet-aware
@@ -643,11 +696,8 @@ ggplot(mms_striped %>% filter(level_mod %in% c("cracker", "honkey", "redneck")),
     )
 ggsave("../figures/supplementary_fig_4.pdf", width = 180, height = 180, units = "mm")
 
-# Findings: Similar behavior for honkey, whites let off and blacks penalized by several models
-# Less evidence for redneck
-
 # Sexism
-ggplot(mms_striped %>% filter(level_mod %in% c("bitch", "slut", "cunt")),
+ggplot(mms_striped %>% filter(level_mod %in% c("S-1", "S-2", "S-3")),
        aes(x = estimate, y = model, color = identity)) +
 
     # Striping layer, facet-aware
